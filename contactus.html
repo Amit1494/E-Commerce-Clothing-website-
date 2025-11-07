@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script type="text/javascript"
+        src="">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "",
+      });
+   })();
+</script>
+<script src="script.js"></script>
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt="logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a  href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a   href="about.html">About</a></li>
+                <li><a class="active" href="contactus.html">Contact</a></li>
+            </ul>
+        </div>
+       <div id=" ">
+        <a href="cart.html"><i class="fa-solid fa-shopping-cart" style="font-size:24px;"></i></a>
+                <i id="bar" class="fa-solid fa-outdent"></i>
+
+
+       </div>
+    </section>
+
+    <section id="page-header">
+        <h2>#LeT's_TaLk</h2>
+        <p>Save more with coupons & up to 70% off!</p>
+    </section>
+    <section id="contact-details" class="section-p1">
+        <div class="details">
+            <span>Get in Touch</span>
+            <h2>Visit one of our agency locations or contact us today </h2>
+            <h3>Head Office </h3>
+            <div>
+                <li>
+                    <i class="fa-solid fa-map"></i>
+                    <p> 56Glassford Street Glassgow G1 1UL NEW York </p>
+                </li>
+                <li>
+                <i class="fa-solid fa-envelope"></i>                   
+                <p> contact@gmail.com</p>
+                </li>
+                <li>
+                <i class="fa-solid fa-phone"></i>                   
+                <p>9079549221</p>
+                </li>
+                <li>
+                <i class="fa-solid fa-clock"></i>                    
+                <p> Monday to Saturday:9:00am-6:00pm </p>
+                </li>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.758266425429!2d74.27625189999999!3d29.607211500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3916f4e630a55437%3A0x54655e5f42f1bca2!2sCentral%20Jail!5e1!3m2!1sen!2sin!4v1762339168559!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+        </div>
+</section>
+ 
+    <section id="form-details">
+      <form id="contact-form">
+  <span>Leave a Message.</span>
+  <h2>We love to hear from you </h2>
+
+  <input type="text" name="name" placeholder="Your Name....." required>
+  <input type="email" name="email" placeholder="Your Email....." required>
+  <input type="text" name="title" placeholder="Subject....." required>
+  <textarea name="message" cols="30" rows="10" placeholder="Your message" required></textarea>
+
+  <button class="normal" type="submit">Submit</button>
+</form>
+
+        
+    </section>
+
+    <section id="NewsLetter" class="section-p1">
+<div class="newstext">
+    <h4>Sign Up for NewsLetter</h4>
+    <p>Get E-mail updates about our latest shop and <span >special offers </span>.</p>
+
+</div>
+<div class="form">
+    <input type="text" placeholder="Your email address."></div>
+    <button class="normal">Sign up.</button>
+</div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong>6996 Harry Potter road ,Hogwarts</p>
+            <p><strong>Phone:</strong>9079549221 </p>
+            <p><strong>Hours:</strong>10:00 - 18:00 Mon-Sat</p>
+            
+
+        </div>
+        <div class="col">
+            <h4>About </h4>
+            <a href="#">About us </a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy </a>
+            <a href="#">Terms and conditions </a>
+            <a href="#">Contact us </a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign in</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist </a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play Store</p>
+            <div class="row">
+                <img src="img/pay/app.jpg">
+                <img src="img/pay/play.jpg">
+                </div>
+                <p>Secured Payment Gateway</p>
+                <img src="img/pay/pay.png">
+
+
+        </div>
+        
+
+    </footer>
+
+<script>
+  const form = document.getElementById('contact-form');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('', '', this)
+      .then(() => {
+        alert('✅ Message sent successfully!');
+        form.reset();
+      }, (error) => {
+        alert('❌ Failed to send message. Error: ' + JSON.stringify(error));
+      });
+  });
+</script>
+
+    
+</body>
+</html>
